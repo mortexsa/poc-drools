@@ -2,3 +2,9 @@ package com.myspace.poc;
 
 import com.myspace.poc.Event;
 
+rule "Sound the alarm"
+when
+    $e : Event( )
+then
+    System.out.println("jai bien recu levent a hbibi");
+end
