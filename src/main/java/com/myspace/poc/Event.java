@@ -7,29 +7,37 @@ package com.myspace.poc;
 @javax.persistence.Entity
 public class Event implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(generator = "EVENT_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(sequenceName = "EVENT_ID_SEQ", name = "EVENT_ID_GENERATOR")
-    private java.lang.Long id;
+	@javax.persistence.GeneratedValue(generator = "EVENT_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(sequenceName = "EVENT_ID_SEQ", name = "EVENT_ID_GENERATOR")
+	private java.lang.Long id;
 
-    public Event() {
-    }
-    
-    public Event(java.lang.Long id) {
-        this.id = id;
-    }
+	private java.lang.String message;
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	public Event() {
+	}
 
+	public java.lang.Long getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
 
+	public java.lang.String getMessage() {
+		return this.message;
+	}
+
+	public void setMessage(java.lang.String message) {
+		this.message = message;
+	}
+
+	public Event(java.lang.Long id, java.lang.String message) {
+		this.id = id;
+		this.message = message;
+	}
 
 }
