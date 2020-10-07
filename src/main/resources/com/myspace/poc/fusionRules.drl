@@ -1,10 +1,12 @@
 package com.myspace.poc;
 
 import com.myspace.poc.Event;
+import com.myspace.poc.User;
 
 rule "Sound the alarm"
 when
     $e : Event( )
+    not( User( this after[0s,15s] $e ) )
 then
     System.out.println("jai bien recu levent a hbibi");
 end
