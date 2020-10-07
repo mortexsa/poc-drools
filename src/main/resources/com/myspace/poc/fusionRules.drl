@@ -9,5 +9,5 @@ when
     $e : Event( ) from entry-point "DEFAULT"
     $u : User( this after[4s,50s] $e ) from entry-point "DEFAULT"
 then
-    System.out.println("jai bien recu levent a hbibi: "+$u.getName());
+    System.out.println("jai bien recu levent a hbibi");
 end
