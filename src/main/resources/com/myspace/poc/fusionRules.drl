@@ -6,7 +6,7 @@ import com.myspace.poc.User;
 
 rule "Sound the alarm"
 when
-    $e : Event( )
+    $e : Event( ) from entry-point "DEFAULT"
     $u : User( this after[4s,50s] $e ) from entry-point "DEFAULT"
 then
     System.out.println("jai bien recu levent a hbibi: "+$u.getName());
