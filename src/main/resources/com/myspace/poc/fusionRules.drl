@@ -3,7 +3,7 @@ package com.myspace.poc;
 import com.myspace.poc.Event;
 import com.myspace.poc.User;
 
-declare Event
+declare User
     @role( event )
 end
 
