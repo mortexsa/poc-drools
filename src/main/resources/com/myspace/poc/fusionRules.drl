@@ -3,14 +3,11 @@ package com.myspace.poc;
 import com.myspace.poc.Event;
 import com.myspace.poc.User;
 
-declare User
-    @role( event )
-end
 
 rule "Sound the alarm"
 when
     $e : Event( )
-    not( User( this after[12s,15s] $e ) )
+    $u : User( this after[4s,50s] $e )
 then
-    System.out.println("jai bien recu levent a hbibi: "+$e.getMessage());
+    System.out.println("jai bien recu levent a hbibi: "+$u.getName());
 end
