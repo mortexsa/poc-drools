@@ -10,7 +10,7 @@ end
 rule "Sound the alarm"
 when
     $e : Event( )
-    not( User( this after[0s,15s] $e ) )
+    not( User( this after[12s,15s] $e ) )
 then
     System.out.println("jai bien recu levent a hbibi");
 end
