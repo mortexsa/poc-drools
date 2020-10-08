@@ -2,9 +2,6 @@ package com.myspace.poc;
 
 import com.myspace.poc.Event;
 
-declare Event
-    @role( event )
-end
 
 
 rule "Sound the alarm"
