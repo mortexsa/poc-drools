@@ -10,6 +10,6 @@ when
     $e  : Event( ) from entry-point "DEFAULT"
     $e2 : Event( this after[4s,50s] $e ) from entry-point "DEFAULT"
 then
-    $r.setId(1);
+    $r.setId(1L);
     $r.setValue(100);
 end
