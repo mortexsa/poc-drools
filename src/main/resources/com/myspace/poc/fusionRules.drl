@@ -6,7 +6,7 @@ import com.myspace.poc.Event;
 rule "Sound the alarm"
 when
     $e  : Event( ) from entry-point "DEFAULT"
-    $ea : Event( this after[4s,50s] $e ) from entry-point "DEFAULT"
+    $ea : Event( this after[10s,30s] $e ) from entry-point "DEFAULT"
 then
-    $ea.setMessage("j'ai bien recu le message");
+    $ea.setMessage("le message a bien été recu entre 10s et 30s");
 end
