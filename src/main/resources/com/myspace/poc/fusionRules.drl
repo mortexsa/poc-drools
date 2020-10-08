@@ -6,8 +6,8 @@ import com.myspace.poc.Risk;
 
 rule "Sound the alarm"
 when
-    $r : Risk( )
-    $e : Event( ) from entry-point "DEFAULT"
+    $r  : Risk( )
+    $e  : Event( ) from entry-point "DEFAULT"
     $e2 : Event( this after[4s,50s] $e ) from entry-point "DEFAULT"
 then
     $r.setId(1);
