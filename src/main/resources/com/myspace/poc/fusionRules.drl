@@ -1,13 +1,15 @@
 package com.myspace.poc;
 
 import com.myspace.poc.Event;
-import com.myspace.poc.User;
+import com.myspace.poc.Risk;
 
 
 rule "Sound the alarm"
 when
+    $r : Risk( )
     $e : Event( ) from entry-point "DEFAULT"
-    $u : User( this after[4s,50s] $e ) from entry-point "DEFAULT"
+    $e2 : Event( this after[4s,50s] $e ) from entry-point "DEFAULT"
 then
-    System.out.println("jai bien recu levent a hbibi");
+    $r.setId(1);
+    $r.setValue(100);
 end
